@@ -1,6 +1,7 @@
 import useSWR from "swr";
+import { API_ENDPOINT } from "../contstants";
 import { fetcher } from "../utils/fetcher";
 
 export const useCharacterData = () => {
-  return useSWR("https://api.sampleapis.com/futurama/characters", fetcher);
+  return useSWR(`${API_ENDPOINT}/characters`, fetcher);
 };
